@@ -27,9 +27,8 @@ class Animal
         ~Animal();
         Animal(const Animal &other);
         Animal &operator=(const Animal &other);
-
         std::string getType() const;
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
 
 };
 
@@ -54,5 +53,17 @@ class Cat : public Animal
         ~Cat();
         Cat(const Cat &other);
         Cat &operator=(const Cat &other);
+        void makeSound() const;
+};
+
+class Piouf : public Animal
+{
+    private:
+        Brain *brain;
+    public:
+        Piouf();
+        ~Piouf();
+        Piouf(const Piouf &other);
+        Piouf &operator=(const Piouf &other);
         void makeSound() const;
 };
