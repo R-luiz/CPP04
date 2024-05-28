@@ -5,16 +5,20 @@ Brain::Brain()
 {
     for (int i = 0; i < 100; i++)
         ideas[i] = "";
+    std::cout << "Brain default constructor called" << std::endl;
+    
 }
 
 Brain::~Brain()
 {
+    std::cout << "Brain destructor called" << std::endl;
 }
 
 Brain::Brain(const Brain &other)
 {
     for (int i = 0; i < 100; i++)
         ideas[i] = other.ideas[i];
+    std::cout << "Brain copy constructor called" << std::endl;
 }
 
 Brain &Brain::operator=(const Brain &other)
@@ -29,18 +33,27 @@ Brain &Brain::operator=(const Brain &other)
 
 Animal::Animal() : type("Animal")
 {
+    std::cout << "Animal default constructor called" << std::endl;
 }
 
 Animal::Animal(std::string type) : type(type)
 {
+    std::cout << "Animal type constructor called" << std::endl;
 }
 
 Animal::~Animal()
 {
+    std::cout << "Animal destructor called" << std::endl;
+}
+
+void Animal::makeSound() const
+{
+    std::cout << "Animal sound" << std::endl;
 }
 
 Animal::Animal(const Animal &other) : type(other.type)
 {
+    std::cout << "Animal copy constructor called" << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &other)
@@ -58,15 +71,19 @@ std::string Animal::getType() const
 Dog::Dog() : Animal("Dog")
 {
     this->brain = new Brain();
+    std::cout << "Dog default constructor called" << std::endl;
 }
 
 Dog::~Dog()
 {
+    delete brain;
+    std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
 {
     this->brain = new Brain(*other.brain);
+    std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &other)
@@ -84,15 +101,19 @@ void Dog::makeSound() const
 Cat::Cat() : Animal("Cat")
 {
     this->brain = new Brain();
+    std::cout << "Cat default constructor called" << std::endl;
 }
 
 Cat::~Cat()
 {
+    delete brain;
+    std::cout << "Cat destructor called" << std::endl;
 }
 
 Cat::Cat(const Cat &other) : Animal(other)
 {
     this->brain = new Brain(*other.brain);
+    std::cout << "Cat copy constructor called" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &other)
