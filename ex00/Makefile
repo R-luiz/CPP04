@@ -17,6 +17,9 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 
 SRCS        :=      Animal.cpp \
                           main.cpp \
+                          Dog.cpp \
+                          Cat.cpp \
+                          WrongAnimal.cpp \
                           
 OBJS        := ${SRCS:.cpp=.o}
 
