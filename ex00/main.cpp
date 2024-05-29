@@ -6,6 +6,9 @@ int main()
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
+
+    WrongCat wc;
+    WrongAnimal *wa = new WrongCat();    
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound();

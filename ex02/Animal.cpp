@@ -50,11 +50,6 @@ Animal::Animal(const Animal &other) : type(other.type)
 
 }
 
-void Animal::makeSound() const
-{
-    std::cout << "Animal sound" << std::endl;
-}
-
 Animal &Animal::operator=(const Animal &other)
 {
     if (this != &other)

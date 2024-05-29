@@ -1,5 +1,7 @@
 
-#pragma once
+
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
 #include <string>
@@ -21,16 +23,6 @@ class Animal
 
 };
 
-class Dog : public Animal
-{
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &other);
-        Dog &operator=(const Dog &other);
-        void makeSound() const;
-};
-
 class Cat : public Animal
 {
     public:
@@ -40,3 +32,5 @@ class Cat : public Animal
         Cat &operator=(const Cat &other);
         void makeSound() const;
 };
+
+#endif
