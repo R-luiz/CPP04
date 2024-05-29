@@ -75,6 +75,7 @@ Dog::Dog() : Animal("Dog")
 
 Dog::~Dog()
 {
+    delete brain;
     std::cout << "Dog destructor called" << std::endl;
 }
 
@@ -104,6 +105,7 @@ Cat::Cat() : Animal("Cat")
 
 Cat::~Cat()
 {
+    delete brain;
     std::cout << "Cat destructor called" << std::endl;
 }
 
