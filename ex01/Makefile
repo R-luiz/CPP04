@@ -7,7 +7,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := Bain
+NAME        := Brain
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror -std=c++98
  
@@ -16,7 +16,12 @@ FLAGS    := -Wall -Wextra -Werror -std=c++98
 ################################################################################
 
 SRCS        :=      Animal.cpp \
+                          Cat.cpp \
+                          Dog.cpp \
+                          WrongAnimal.cpp \
+                          WrongCat.cpp \
                           main.cpp \
+						  Brain.cpp
                           
 OBJS        := ${SRCS:.cpp=.o}
 

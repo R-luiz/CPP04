@@ -1,20 +1,10 @@
 
-#pragma once
+
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
 #include <iostream>
 #include <string>
-
-class Brain
-{
-    private:
-        std::string ideas[100];
-    
-    public:
-        Brain();
-        ~Brain();
-        Brain(const Brain &other);
-        Brain &operator=(const Brain &other);
-};
 
 class Animal
 {
@@ -33,26 +23,4 @@ class Animal
 
 };
 
-class Dog : public Animal
-{
-    private:
-        Brain *brain;
-    public:
-        Dog();
-        ~Dog();
-        Dog(const Dog &other);
-        Dog &operator=(const Dog &other);
-        void makeSound() const;
-};
-
-class Cat : public Animal
-{
-    private:
-        Brain *brain;
-    public:
-        Cat();
-        ~Cat();
-        Cat(const Cat &other);
-        Cat &operator=(const Cat &other);
-        void makeSound() const;
-};
+#endif
