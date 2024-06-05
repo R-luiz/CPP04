@@ -3,22 +3,22 @@
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
-    std::cout << "Animal default constructor called" << std::endl;
+    std::cout << "WRAnimal default constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(std::string type) : type(type)
 {
-    std::cout << "Animal type constructor called" << std::endl;
+    std::cout << "WRAnimal type constructor called" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "Animal destructor called" << std::endl;
+    std::cout << "WRAnimal destructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &other) : type(other.type)
 {
-    std::cout << "Animal copy constructor called" << std::endl;
+    std::cout << "WRAnimal copy constructor called" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
@@ -35,5 +35,5 @@ std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-    std::cout << "Animal sound" << std::endl;
+    std::cout << "WRAnimal sound" << std::endl;
 }
