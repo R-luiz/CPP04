@@ -4,7 +4,7 @@
 
 #include "WrongAnimal.hpp"
 
-class WrongCat : public Animal
+class WrongCat : public WrongAnimal
 {
     public:
         WrongCat();

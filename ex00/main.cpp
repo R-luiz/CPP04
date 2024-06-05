@@ -16,6 +16,9 @@ int main()
     WrongAnimal *wa = new WrongCat();    
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
+    std::cout << meta->getType() << " " << std::endl;
+    wa->makeSound();
+    wc.makeSound();
     i->makeSound();
     j->makeSound();
     meta->makeSound();
