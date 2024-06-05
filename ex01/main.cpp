@@ -7,20 +7,21 @@
 
 int main()
 {
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-delete j;
-delete i;
+    const Animal meta = Animal();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    delete j;
+    delete i;
 
-WrongAnimal *wa = new WrongCat();
-delete wa;
+    WrongAnimal *wa = new WrongCat();
+    delete wa;
 
-{WrongAnimal wb = WrongAnimal();}
-WrongCat wc = WrongCat();
-WrongAnimal wd = WrongCat();
-WrongCat we = WrongCat();
-wc.makeSound();
-we.makeSound();
-wd.makeSound();
-return 0;
+    {WrongAnimal wb = WrongAnimal();}
+    WrongCat wc = WrongCat();
+    WrongAnimal wd = WrongCat();
+    WrongCat we = WrongCat();
+    wc.makeSound();
+    we.makeSound();
+    wd.makeSound();
+    return 0;
 }
